@@ -1,0 +1,10 @@
+.modalTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.modalPicture {
+  text-align: center;
+  max-width: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,13 @@
+/* .movieList {
+  border: solid 1px red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+} */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}

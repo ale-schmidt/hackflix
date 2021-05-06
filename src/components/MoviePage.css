@@ -1,0 +1,34 @@
+.titleMoviePage {
+  font-size: 2.5rem;
+}
+
+.moviePageCard {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: solid 1px rgb(212, 210, 210);
+  max-width: 90%;
+}
+.moviePagePicture {
+  max-width: 90%;
+  max-height: 400px;
+  transition: transform 0.2s;
+}
+
+.moviePageCard img:hover {
+  z-index: 100;
+  position: relative;
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 9px 1px #000000;
+  box-shadow: 0px 0px 9px 1px #000000;
+  border: 1px solid rgb(233, 233, 233);
+}
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.spinner {
+  border: solid 1px red;
+  height: 100vh;
+}

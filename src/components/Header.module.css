@@ -1,0 +1,50 @@
+.header-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/src/img/608e113357d47.jpg");
+  /* background-image: url("/src/img/608e113357d47.jpg"); */
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 3px;
+  position: relative;
+  opacity: 0.95;
+}
+
+.header-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f3f1f1;
+  /* pasar a flex box */
+}
+
+.title {
+  font-size: 50px;
+  /* pasarlo a rem */
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.512);
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.logo {
+  color: #cccccc;
+  font-size: 20px;
+}
+
+.logo:hover {
+  color: rgb(224, 224, 224);
+}
