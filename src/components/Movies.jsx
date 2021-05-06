@@ -20,7 +20,7 @@ function Movies({ inputText, rate }) {
 
       setMovies(response.data.results);
     };
-
+    setPageNumber();
     getData();
   }, [inputText, pageNumber, rate]);
 
