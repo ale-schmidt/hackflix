@@ -9,6 +9,11 @@ function Movies({ inputText, rate }) {
   const [pageNumber, setPageNumber] = React.useState(1);
   const [isLoading, setisLoading] = React.useState(true);
 
+  // useEffect(() => {
+  //   window.innerHeight + Math.ceil(window.pageYOffset) >=
+  //     document.body.offsetHeight;
+  // }, [input]);
+
   React.useEffect(() => {
     const url = inputText
       ? `https://api.themoviedb.org/3/search/movie?api_key=4203e26fc950856ad43f64271db2155f&language=en-US&query=${inputText}&page=${pageNumber}&include_adult=false`
@@ -26,9 +31,21 @@ function Movies({ inputText, rate }) {
     getData();
   }, [inputText, pageNumber, rate]);
 
-  // React.useEffect(() => {
-  //   setPageNumber(1);
-  // }, [inputText, rate]);
+  const handleScroll = () => {
+    if (
+      window.innerHeight + Math.ceil(window.pageYOffset) >=
+      document.body.offsetHeight
+    )
+      setPageNumber((pageNumber) => pageNumber + 1);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("croll", handleScroll);
+
+    return () => {
+      window.removeEventListener("croll", handleScroll);
+    };
+  });
 
   const filteredMovies =
     movies &&
